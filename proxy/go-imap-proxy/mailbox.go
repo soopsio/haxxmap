@@ -34,7 +34,6 @@ func (m *mailbox) Status(items []imap.StatusItem) (*imap.MailboxStatus, error) {
 		mbox := *m.u.c.Mailbox()
 		return &mbox, nil
 	}
-
 	return m.u.c.Status(m.name, items)
 }
 
